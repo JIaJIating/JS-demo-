@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+	
+    </style>
+</head>
+<body>
+	<form action="go.php" id="fid">
+		<p>用户名：</p>
+		<p>
+		<input type="text" value="jkt" id="ipt">	
+		</p>
+		<p><input type="submit" value="ok"></p>
+	</form>
+	
+
+</body>
+<script>
+	fidobj=document.getElementById('fid');
+	fidobj.onsubmit=function(){
+		r=confirm('您确认提交表单吗？')
+	;
+	if(!r){
+		return false;
+	}
+	}
+</script>
+</html>

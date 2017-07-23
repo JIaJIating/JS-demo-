@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+    <style>
+	*{
+		font-family: 微软雅黑;
+	}
+	.main{
+		width: 1200px;
+		height: 300px;
+		margin: 0 auto;
+	}
+	.left{
+		padding: 10px;
+		width: 570px;
+		height: 100%;
+		border: 1px solid black;
+		float: left;
+	}
+	.right{
+		padding: 10px;
+		width: 570px;
+		height: 100%;
+		border: 1px solid black;
+		float: right;
+	}
+	textarea{
+		width: 400px;
+		height: 100px;
+	}
+    </style>
+</head>
+<body>
+<div class="main">
+	<div class="left">
+		<p>用户名：</p>
+		<p id="pid1"></p>
+		<p>留言：</p>
+		<p id="tid1"></p>
+	</div>
+	<div class="right">
+		<form action="">
+			<p>用户名：</p>
+			<p><input type="text" id="pid2"></p>
+			<p>
+				<textarea name="" id="tid2" cols="30" rows="10">
+					
+				</textarea>
+			</p>
+
+		</form>
+	</div>
+</div>	
+	
+
+</body>
+<script>
+	pid1obj=document.getElementById('pid1');	
+	pid2obj=document.getElementById('pid2');
+	pid2obj.onkeyup=function(){
+		val=this.value;
+		pid1obj.innerHTML=val;
+	}
+
+	tid1obj=document.getElementById('tid1');	
+	tid2obj=document.getElementById('tid2');
+	tid2obj.onkeyup=function(){
+		val=this.value;
+		tid1obj.innerHTML=val;
+	}
+</script>
+</html>

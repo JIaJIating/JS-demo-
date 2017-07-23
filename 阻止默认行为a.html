@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>a链接</title>
+    <style>
+		*{
+			font-family: 微软雅黑;
+		}
+		
+    </style>
+</head>
+<body>
+	<a href="javascript:" id="aid">百度</a>
+
+</body>
+<script>
+// aidobj=document.getElementById('aid');
+// x=5;
+// // x=2;
+// aidobj.onclick=function(){
+// 	if(x<3){
+// 		alert('x<3');
+// 		return false;
+// 	}
+	
+// }
+aidobj=document.getElementById('aid');
+x=5;
+aidobj.onclick=function(){
+	if(x<3){
+		alert('x<3');
+		return false;
+	}else{
+		location='http://www.baidu.com';
+	}
+	
+}
+</script>
+</html>

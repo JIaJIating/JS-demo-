@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <style>
+		*{
+			font-family: 微软雅黑;
+		}
+    </style>
+</head>
+<body>
+	<p>用户名：</p>
+	<p><input type="text" value="jkt" id="tid"> </p>
+	<p><input type="submit" value="ok"> </p>	
+</body>
+<script>
+	tidobj=document.getElementById('tid');
+	tidobj.onfocus=function(){
+		this.select();
+	}
+</script>
+</html>

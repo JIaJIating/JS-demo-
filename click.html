@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>事件对象</title>
+    <style>
+		*{
+			font-family: 微软雅黑;
+		}
+		img{
+			width: 50px;
+			height: 50px;
+		}
+		#up{
+			cursor: pointer;
+		}
+		#tid{
+			display: none;
+		}
+		input[type=button]{
+			background: #fff;
+			border: 1px solid #ccc;
+		}
+    </style>
+</head>
+<body>
+	<form action="">
+	<p>上传文件：</p>
+	<p><input type="file" id="tid"> </p>
+	<p id="pid"></p>
+	<p><img src="d.jpg" id="up"></p>
+	<p><input type="submit" value="ok"> </p>
+</form>
+</body>
+<script>
+tidobj=document.getElementById('tid');
+upobj=document.getElementById('up');
+pidobj=document.getElementById('pid');
+
+upobj.onclick=function(){
+	tidobj.click();
+}
+tidobj.onchange=function(){
+	pidobj.innerHTML=this.value;
+}
+</script>
+</html>

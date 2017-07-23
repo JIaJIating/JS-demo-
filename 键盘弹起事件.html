@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>键盘事件</title>
+    <style>
+		*{
+			font-family: 微软雅黑;
+		}
+    </style>
+</head>
+<body>
+<h3>验证码强制大写</h3>
+	<form action="">
+		<p>用户名：</p>
+		<p><input type="text"></p>
+		<p>密码：</p>
+		<p><input type="password"></input></p>
+		<p>验证码：</p>
+		<p><input type="text" id="verify"></p>
+		<p><input type="submit" value="OK!"></p>
+	</form>
+	
+
+</body>
+<script>
+	vobj=document.getElementById('verify');
+	vobj.onkeyup=function(){
+		val=this.value;
+		val2=val.toUpperCase();
+		this.value=val2;
+	}
+</script>
+</html>

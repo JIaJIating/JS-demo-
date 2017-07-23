@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>事件对象</title>
+    <style>
+		*{
+			font-family: 微软雅黑;
+		}
+		#did{
+			width: 80px;
+			height: 100px;
+			background: #000;
+			color: #0f0;
+			border-radius: 50px;
+			text-align: center;
+			line-height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+    </style>
+</head>
+<body>
+	<div id="did">我是乐乐</div>
+</body>
+<script>
+didobj=document.getElementById('did');
+  document.onmousemove=function(event){
+  	x=event.clientX;
+  	y=event.clientY;
+  	document.title=x+'-'+y;
+
+  	didobj.style.left=x+'px';
+  	didobj.style.top=y+'px';
+  }
+</script>
+</html>

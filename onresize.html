@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>onresize</title>
+    <style>
+	*{
+		font-family: 微软雅黑;
+		padding: 0px;
+		margin: 0px;
+	}
+    </style>
+</head>
+<body>
+	
+	<div><img src="a.jpg" id="imgid"></div>
+
+</body>
+<script>
+function show(){
+	sc=document.documentElement.clientWidth;
+		if(sc>1024){
+			document.body.style.background="#00f";
+			
+		}else if(sc>600){
+			document.body.style.background="#0f0";
+		}else{
+			document.body.style.background="#f00";
+		}
+}
+	window.onresize=function(){
+		show();
+	}
+</script>
+</html>
